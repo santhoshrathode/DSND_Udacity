@@ -23,38 +23,26 @@ There are three major steps in this project.
     Using flask, we can run our model and deploy in the website so that people can manually type the message and see its category.
 
 ### File Descriptions
-
 app
 
-| - template
-| |- master.html 
-    # main page of web app
-| |- go.html 
-    # classification result page of web app
-|- run.py 
-    # Flask file that runs app
+    | - template
+    | |- master.html # main page of web app
+    | |- go.html # classification result page of web app
+    |- run.py # Flask file that runs app
 
 data
 
-|- disaster_categories.csv 
-    # raw data  from Figure Eight to process
-|- disaster_messages.csv 
-    # raw data  from Figure Eight to process
-|- process_data.py 
-    # data cleaning pipeline, it cleans the data and saved into db.
-|- DisasterResponse.db 
-    # database to save clean data to
+    |- disaster_categories.csv # data to process
+    |- disaster_messages.csv # data to process
+    |- process_data.py # data cleaning pipeline
+    |- InsertDatabaseName.db # database to save clean data to
 
 models
 
-|- train_classifier.py 
-    # This machine learning pipeline and in this we train our model to obtain classifier
-|- classifier.pkl 
-    # saved model (due to large size i am not adding this to repo)
+    |- train_classifier.py # machine learning pipeline
+    |- classifier.pkl # saved model
 
 README.md
-
-
 
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
