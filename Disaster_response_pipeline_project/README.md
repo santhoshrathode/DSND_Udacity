@@ -3,6 +3,11 @@
 ### Introduction
 
 In this project, I am going to build disaster response machine learning pipeline to categorize emergency messeges based on the needs communicated by the sender. 
+
+This ML model used to categorize real messages that were sent during disaster events so that the messages could be sent to an appropriate responsive agency. The project includes a web application where an people can type their messages and get classification results based on thier categories along with their data visualization.
+
+
+
 There are three major steps in this project. 
 
 1. ETL Process
@@ -22,21 +27,30 @@ There are three major steps in this project.
 app
 
 | - template
-| |- master.html # main page of web app
-| |- go.html # classification result page of web app
-|- run.py # Flask file that runs app
+| |- master.html 
+    # main page of web app
+| |- go.html 
+    # classification result page of web app
+|- run.py 
+    # Flask file that runs app
 
 data
 
-|- disaster_categories.csv # raw data  from Figure Eight to process
-|- disaster_messages.csv # raw data  from Figure Eight to process
-|- process_data.py # data cleaning pipeline, it cleans the data and saved into db.
-|- DisasterResponse.db # database to save clean data to
+|- disaster_categories.csv 
+    # raw data  from Figure Eight to process
+|- disaster_messages.csv 
+    # raw data  from Figure Eight to process
+|- process_data.py 
+    # data cleaning pipeline, it cleans the data and saved into db.
+|- DisasterResponse.db 
+    # database to save clean data to
 
 models
 
-|- train_classifier.py # This machine learning pipeline and in this we train our model to obtain classifier
-|- classifier.pkl # saved model (due to large size i am not adding this to repo)
+|- train_classifier.py 
+    # This machine learning pipeline and in this we train our model to obtain classifier
+|- classifier.pkl 
+    # saved model (due to large size i am not adding this to repo)
 
 README.md
 
