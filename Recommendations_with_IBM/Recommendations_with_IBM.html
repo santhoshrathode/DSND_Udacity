@@ -14366,7 +14366,7 @@ Name: article_id, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The number of user-article interactions</span>
@@ -14384,7 +14384,7 @@ Name: article_id, dtype: float64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[22]:</div>
+    <div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -14401,16 +14401,54 @@ Name: article_id, dtype: float64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">unique_articles</span> <span class="o">=</span> <span class="mi">714</span> <span class="c1"># len(df.article_id.value_counts())</span>
-<span class="n">total_articles</span> <span class="o">=</span> <span class="mi">1051</span> <span class="c1"># df_content.article_id.nunique()</span>
-<span class="n">unique_users</span> <span class="o">=</span> <span class="mi">5148</span> <span class="c1"># df.email.nunique()</span>
-<span class="n">user_article_interactions</span> <span class="o">=</span> <span class="mi">45993</span> <span class="c1"># len(df)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#Edited</span>
+<span class="n">unique_articles</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">article_id</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+<span class="n">total_articles</span> <span class="o">=</span> <span class="n">df_content</span><span class="o">.</span><span class="n">article_id</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+<span class="n">unique_users</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">email</span><span class="o">.</span><span class="n">nunique</span><span class="p">()</span>
+<span class="n">user_article_interactions</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">unique_articles</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">total_articles</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">unique_users</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">user_article_interactions</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>714
+1051
+5148
+45993
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -16382,7 +16420,8 @@ The top 10 recommendations for user 20 are the following article names:
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>From all of the above observation, we see that training accuracy increases with increasing number of latent features whereas the testing accuracy decreases with increasing number of latent features.  Observed significant overfitting issues when we choose a larger number of latent features. I would think that it is better for us to choose a smaller number of latent features.</p>
-<p>Also, there were only 20 users co-existed between testing and training datasets and SVD can make recommondation to only 20 individuals so accuracy looks high. It would be better for this recommondation if we could have more individuals that present in both training and testing sets. To test how well our recommendation engine works in practice, we could conduct an A/B test for new users to help solve the cold start problem. A simple experiment would be to recommend articles to one group using our recommendation engine and then to recommend just the most popular articles to the other group of users. We would then compare the click through rates to effectively measure if our recommendation engine leads to an increase in clicks. If we see a significant rise in clicks by using recommendation engine then we could conclude this works well and should be deployed.</p>
+<p>Also, there were only 20 users co-existed between testing and training datasets and SVD can make recommondation to only 20 individuals so accuracy looks high. As we see 20 users in the test set are present in the training set, which makes the users that could be recommended using the collaborative filtering techniques. There are a large amount of users will suffer from the cold start problem, which forced us to use the rank based reccommendation. It would be better for this recommondation if we could have more individuals that present in both training and testing sets. To test how well our recommendation engine works in practice, we could conduct an A/B test for new users to help solve the cold start problem.</p>
+<p>A simple another experiment would be to recommend articles to one group using our recommendation engine and then to recommend just the most popular articles to the other group of users. We would then compare the click through rates to effectively measure if our recommendation engine leads to an increase in clicks. If we see a significant rise in clicks by using recommendation engine then we could conclude this works well and should be deployed.</p>
 
 </div>
 </div>

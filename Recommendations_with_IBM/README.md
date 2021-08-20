@@ -6,6 +6,9 @@ For this project you will analyze the interactions that users have with articles
 
 
 ### File Descriptions
+data :  It includes raw data for this recommendation project
+    articles_community.csv 
+    user-item-interactions.csv
 Recommendations_with_IBM.ipynb
     In this notebook, I will be putting my recommendation skills to use on real data from the IBM Watson Studio platform.
 Recommendations_with_IBM.html
