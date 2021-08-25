@@ -18,3 +18,11 @@ This Repository contains code related to DS Nanodegree Program
     Recommendations with IBM
         For this project you will analyze the interactions that users have with articles on the IBM Watson Studio platform, and make recommendations to them about new articles you think they will like.
         Link to Project: https://github.com/santhoshrathode/DSND_Udacity/tree/main/Recommendations_with_IBM
+        
+        
+### Project 4
+    Sparkify_Capstone_Project
+        Business problem is to predicting potential customers who will churn or cancels their subscription from Sparkify music service using Pspark.
+        Link to Project: https://github.com/santhoshrathode/DSND_Udacity/tree/main/Sparkify_Capstone
+        Link to Medium post: https://santhoshrathode.medium.com/sparkify-customer-churn-analysis-prediction-7b3e86abc697
+        
