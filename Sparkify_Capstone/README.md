@@ -9,18 +9,18 @@ Business problem is to predicting potential customers who will churn or cancels 
 
 ### File Descriptions
 
-Sparkify_Capstone_Project.ipynb
-    Notebook contains complete work/code related to this project.
-    
-README.md
+    Sparkify_Capstone_Project.ipynb
+        Notebook contains complete work/code related to this project.
+
+    README.md
 
 ### Required Packages
 
-Pandas
-pyspark(sql and ml)
-matplot
-numpy
-Seaborn
+    Pandas
+    pyspark(sql and ml)
+    matplot
+    numpy
+    Seaborn
 
 ### Data Source
 Data is readily available in the Udacity workspace
@@ -39,19 +39,19 @@ Data is readily available in the Udacity workspace
     Churn Flag
 
 ### Model Used
-Random Forest Classifier
-Logistic Regression
-Gradient-Boosted Tree Classifier
+    Random Forest Classifier
+    Logistic Regression
+    Gradient-Boosted Tree Classifier
 
 ### Metrics Used
-F1 Score
-Accuracy
+    F1 Score
+    Accuracy
 
 ### Work Flow
-Load and Clean Dataset
-Exploratory Data Analysis and Defining Churn Label
-Feature Engineering
-Test Models and Determine Best Model with tuning parameters
+    Load and Clean Dataset
+    Exploratory Data Analysis and Defining Churn Label
+    Feature Engineering
+    Test Models and Determine Best Model with tuning parameters
 
 ### Results
     Detailed observations on the Project are documented on Medium : https://santhoshrathode.medium.com/sparkify-customer-churn-analysis-prediction-7b3e86abc697
